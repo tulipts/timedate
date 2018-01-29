@@ -17,6 +17,7 @@ public class Calendar_Year_TC01 extends BaseTest {
 		try {
 			navigateToApp();
 			Log.info("Changing year");
+			System.out.println("Start Test: Calendar_Year_TC01. Change and validate year in calendar");
 			// Change year - enter year
 			HomePage home = new HomePage(driver);
 			home.changeYear(data.get("Year"));
@@ -26,7 +27,7 @@ public class Calendar_Year_TC01 extends BaseTest {
 			// Validate year on calendar page
 			CalendarPage calendar = new CalendarPage(driver);
 			//String actual = calendar.getCalendarHeader();
-			System.out.println("Expected:" +  data.get("Year"));
+			System.out.println("Expected Year:" +  data.get("Year"));
 			System.out.println("Actual:" +  calendar.getCalendarHeader());
 			Log.info("Asserting year");
 			Assert.assertTrue(calendar.getCalendarHeader().contains(data.get("Year")));
@@ -38,6 +39,7 @@ public class Calendar_Year_TC01 extends BaseTest {
 			Log.error("TEST FAILED");
 			Assert.fail(e.getMessage());
 		}
+		System.out.println("End Test: Calendar_Year_TC01.");
 		
 	}
 }

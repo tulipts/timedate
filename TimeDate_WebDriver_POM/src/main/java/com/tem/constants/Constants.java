@@ -32,7 +32,7 @@ public class Constants {
 	// Wait
 	public static final int pageLoadWaitTime = 10;
 	public static final int implicitWaitTime = 10;
-	public static final int explicitWaitTime = 10;
+	public static final int explicitWaitTime = 6000;
 
 	/* Locators */
 	// HomePage

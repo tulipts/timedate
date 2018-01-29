@@ -43,7 +43,7 @@ public class HomePage extends BasePage {
 		}		
 		calendarYear_Text.clear();
 		calendarYear_Text.sendKeys(year);
-		System.out.println("changeyr " + this);
+		System.out.println("Change the year on the calendar dialog. Test name = " + this);
 		//Return to the same page object
 		return this;	
 	}
@@ -56,6 +56,7 @@ public class HomePage extends BasePage {
 		}		
 		Select selector = new Select(calendarMonthOption_Select);
 		selector.selectByVisibleText(month);
+		System.out.println("Change the month on the calendar dialog. Test name = " + this);
 		//Return to the same page object
 		return this;
 	}

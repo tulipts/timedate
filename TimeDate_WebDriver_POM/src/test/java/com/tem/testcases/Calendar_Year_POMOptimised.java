@@ -17,6 +17,7 @@ public class Calendar_Year_POMOptimised extends BaseTest {
 		try {
 			navigateToApp();
 			Log.info("Changing year");
+			System.out.println("Start Test: Calendar_Year_POMOptimised. Change and validate year in calendar");
 			// Change year - enter year
 			HomePage home = new HomePage(driver);
 			// home.changeYear(data.get("Year"));			
@@ -29,6 +30,9 @@ public class Calendar_Year_POMOptimised extends BaseTest {
 //in the HomePage class, that allows access to other methods in the same class. So as viewCalendar returns
 //the CalendarPage as the page object, that allows access to its method getCalendarHeader		
 			Assert.assertTrue(home.changeYear(data.get("Year")).viewCalendar().getCalendarHeader().contains(data.get("Year")));
+			CalendarPage calendar = new CalendarPage(driver);
+			System.out.println("Expected Year:" +  data.get("Year"));
+			System.out.println("Actual:" +  calendar.getCalendarHeader());
 			Log.info("TEST PASSED");
 		}catch(Exception e) {
 			Log.fatal("TEST FAILED");
@@ -37,6 +41,6 @@ public class Calendar_Year_POMOptimised extends BaseTest {
 			Log.error("TEST FAILED");
 			Assert.fail(e.getMessage());
 		}
-		
+		System.out.println("End Test: Calendar_Year_POMOptimised.");
 	}
 }

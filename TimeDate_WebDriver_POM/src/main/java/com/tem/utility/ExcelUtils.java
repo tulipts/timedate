@@ -79,6 +79,7 @@ public class ExcelUtils {
 	public static Object[][] getTableArray(String sheetName, String testCaseName) throws Exception {
 		// Find rows
 		int rowCount = getRowCount(sheetName);
+		System.out.println("Running ExcelUtils. Show current test case info.");
 		System.out.println("Total rows: " + rowCount);
 		// Find the test Case Row Start number
 		int testCaseRowStart = 0;

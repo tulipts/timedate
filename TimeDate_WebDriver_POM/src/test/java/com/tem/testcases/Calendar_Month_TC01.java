@@ -17,6 +17,7 @@ public class Calendar_Month_TC01 extends BaseTest {
 		try {
 			navigateToApp();
 			Log.info("Changing month");
+			System.out.println("Start Test: Calendar_Month_TC01. Change and validate month in calendar");
 			// Change month - select month
 			HomePage home = new HomePage(driver);
 			home.changeMonth(data.get("Month"));
@@ -40,6 +41,7 @@ public class Calendar_Month_TC01 extends BaseTest {
 			Log.error("TEST FAILED");
 			Assert.fail(e.getMessage());
 		}
+		System.out.println("End Test: Calendar_Month_TC01.");
 		
 	}
 }
