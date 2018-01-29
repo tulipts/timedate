@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Calendar Month Test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="5.946">
+  <properties />
+  
+  
+            <testcase name="testCalendarYear" time="5.946" classname="com.tem.testcases.Calendar_Month_TC01" />
+      
+</testsuite>

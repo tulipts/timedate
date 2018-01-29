@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Calendar Test Suite">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>	
+	<test name="Calendar Year Test">
+		<classes>
+			<class name="com.tem.testcases.Calendar_Year_TC01" />
+		</classes>
+	</test>
+	<test name="Calendar Month Test">
+		<classes>
+			<class name="com.tem.testcases.Calendar_Month_TC01" />
+		</classes>
+	</test>	
+	<test name="Calendar Year Test Optimized">
+		<classes>
+			<class name="com.tem.testcases.Calendar_Year_POMOptimised" />
+		</classes>
+	</test>
+	<!-- Calendar Test -->
+</suite> <!-- Calendar Test Suite -->
